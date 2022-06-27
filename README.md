@@ -34,7 +34,7 @@ Enter MongoDB cli:
 
     $ mongo
 
-Create databse:
+Create database:
 
     > use explorerdb
 
@@ -46,13 +46,17 @@ Create user with read/write access:
 
     > db.addUser( { user: "iquidus", pwd: "3xp!0reR", roles: [ "readWrite"] })
 
+Exit MongoDB:
+
+    > exit
+
 ### Get the source
 
     git clone https://github.com/outracoin/outracoin-explorer
 
 ### Install node modules
 
-    cd explorer && npm install --production
+    cd outracoin-explorer && npm install --production
 
 ### Configure
 
@@ -69,7 +73,6 @@ Create user with read/write access:
 *You can access the explorer at:*
 
      http://[ip_address]:3331/  where [ip_address] is the IP address of the machine running it
-
 
 As of version 1.4.0 the explorer defaults to cluster mode, forking an instance of its process to each cpu core. This results in increased performance and stability. Load balancing gets automatically taken care of and any instances that for some reason die, will be restarted automatically. For testing/development (or if you just wish to) a single instance can be launched with
 
