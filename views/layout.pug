@@ -2,6 +2,7 @@ doctype html
 html
   head
     title= settings.title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/themes/' + settings.theme + '/bootstrap.min.css')
     link(rel='stylesheet', href='/vendor/jqplot/jquery.jqplot.css')
     link(rel='stylesheet', href='/vendor/flags-css/css/flag-icon.min.css')
@@ -32,7 +33,7 @@ html
             var diffString = json.data[0].difficulty;
             var hashrateString = json.data[0].hashrate;
             if (!isNaN(json.data[0].difficulty)) {
-              diffString = parseFloat(json.data[0].difficulty).toFixed(2);
+              diffString = parseFloat(json.data[0].difficulty).toFixed(4);
             }
             if (!isNaN(json.data[0].supply)) {
               supplyString = parseInt(parseFloat(json.data[0].supply).toFixed(0)).toLocaleString('en');
@@ -123,7 +124,7 @@ html
           span.navbar-toggler-icon 
         a.navbar-brand(href='/')
           if typeof settings.headerlogo !== "undefined" && settings.headerlogo && settings.headerlogo.length > 1
-            img(src=settings.headerlogo, style='width:153px;height:45px;')
+            img(src=settings.headerlogo, style='height:45px;')
           else
             =settings.title
       .collapse.navbar-collapse(id='navbar-collapse')
@@ -203,7 +204,8 @@ html
                   label#difficulty -
         
         .col-md-2.col-sm-12
-            img(src=settings.logo, style='margin-top:-15px;height:128px;')
+            a.nav-link.poweredby(href='/')
+              img(src=settings.logo, style='padding: 5px; height:100px;')
         .col-md-2
           .card.card-default.d-none.d-md-block.d-block
             .card-header
@@ -271,8 +273,7 @@ html
       .col-md-4.navbar-nav
         ul.nav.justify-content-center
           li.text-center(style='margin-left:80px;margin-right:80px;')
-            p(style='')
-              a.nav-link.poweredby(href='https://github.com/iquidus/explorer', target='_blank') Powered by Iquidus Explorer v#{settings.iquidus_version}
+            p(style='color: white;') (c)(p) 2022 by OUTRACHAIN.ORG
       .col-md-4.navbar-nav
         ui.nav.justify-content-end
           label#lblBlockcount.badge.badge-pill.nav-link

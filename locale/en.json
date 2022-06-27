@@ -78,9 +78,9 @@
 
     "net_addnodes": "Add Nodes",
     "net_connections": "Connections",
-    "net_address": "Address",
-    "net_protocol": "Protocol",
-    "net_subversion": "Sub-version",
+    "net_address": "IP Address:Port",
+    "net_protocol": "Version",
+    "net_subversion": "User Agent",
     "net_country": "Country",
     "net_warning": "This is sub sample of the network based on wallets that have connected to this node in the last 24hours.",
 

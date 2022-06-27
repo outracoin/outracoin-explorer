@@ -314,12 +314,13 @@ router.get('/ext/summary', function(req, res) {
             if (hashrate == 'There was an error. Check your console.') {
               hashrate = 0;
             }
+	    console.log('stats',stats);
             res.send({ data: [{
               difficulty: difficulty,
               difficultyHybrid: difficultyHybrid,
               supply: stats.supply,
               hashrate: hashrate,
-              lastPrice: stats.last_price,
+              lastPrice: stats.last_price, // valor da moeda
               connections: connections,
               blockcount: blockcount
             }]});

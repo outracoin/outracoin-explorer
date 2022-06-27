@@ -28,7 +28,7 @@ block content
                   td #{time}
                   td.view_tx  
                     a(href='/block/'+tx.blockhash)
-                      span.fa.fa-eye 
+                      span.fa.fa-search
             else
               if confirms < (confirmations / 2)
                 tr.table-danger
@@ -38,7 +38,7 @@ block content
                   td #{time}
                   td.view_tx  
                     a(href='/block/'+tx.blockhash)
-                      span.fa.fa-eye 
+                      span.fa.fa-search 
               else
                 tr.table-warning
                   td #{confirms}
@@ -47,7 +47,7 @@ block content
                   td #{time}
                   td.view_tx  
                     a(href='/block/'+tx.blockhash)
-                      span.fa.fa-eye
+                      span.fa.fa-search
     if tx.vout.length < 1
       .alert.alert-info(role='alert', style='text-align:center;')   
         strong #{settings.locale.tx_nonstandard}

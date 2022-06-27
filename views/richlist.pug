@@ -14,7 +14,7 @@ block content
             renderer: $.jqplot.PieRenderer,
             rendererOptions: {
               diameter: 260,
-              padding: 0,
+              padding: 2,
               sliceMargin: 4, 
               // Put data labels on the pie slices.
               // By default, labels show the percentage of the slice.
@@ -33,9 +33,9 @@ block content
         }
       );
     });
-    $(window).resize(function () { 
+    /*$(window).resize(function () { 
       pieWealthDist.replot( { resetAxes: false } );
-    });  
+    });*/  
   .row
     .col-xs-12.col-md-8
       .tabpanel
