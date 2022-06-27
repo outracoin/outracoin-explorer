@@ -72,7 +72,7 @@ mongoose.connect(dbString, async function(err) {
               // Geolocate and add to database
               console.log(`Trying to add ${peer['address']}:${peer['port']} to database...`);
               console.log(`Geodecoding ${peer['address']}...`);
-              request({uri: 'https://freegeoip.app/json/' + peer['address'], json: true}, async function (error, response, geo) {
+              request({uri: 'https:///reallyfreegeoip.org/json/' + peer['address'], json: true}, async function (error, response, geo) {
                 db.create_peer({
                   address: peer['address'],
                   port: peer['port'],
