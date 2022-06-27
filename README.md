@@ -66,6 +66,11 @@ Create user with read/write access:
 
 *Note: mongod must be running to start the explorer*
 
+*You can access the explorer at:*
+
+     http://[ip_address]:3331/  where [ip_address] is the IP address of the machine running it
+
+
 As of version 1.4.0 the explorer defaults to cluster mode, forking an instance of its process to each cpu core. This results in increased performance and stability. Load balancing gets automatically taken care of and any instances that for some reason die, will be restarted automatically. For testing/development (or if you just wish to) a single instance can be launched with
 
     node --stack-size=10000 bin/instance
