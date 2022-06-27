@@ -13,7 +13,19 @@ An open source block explorer written in node.js.
 ### Requires
 
 *  node.js >= 8.17.0 (12.14.0 is advised for updated dependencies)
-*  mongodb 4.2.x
+
+        sudo apt update
+        sudo apt install -y nodejs npm
+        
+        
+*  mongodb >= 2.6.10
+
+        sudo apt update
+        sudo apt install -y mongodb
+        sudo systemctl enable mongodb
+        sudo service mongodb start
+        
+        
 *  *coind
 
 ### Create database
@@ -32,11 +44,11 @@ Create user with read/write access:
 
 *Note: If you're using mongo shell 4.2.x, use the following to create your user:
 
-    > db.addUser( { user: "username", pwd: "password", roles: [ "readWrite"] })
+    > db.addUser( { user: "iquidus", pwd: "3xp!0reR", roles: [ "readWrite"] })
 
 ### Get the source
 
-    git clone https://github.com/iquidus/explorer explorer
+    git clone https://github.com/outracoin/outracoin-explorer
 
 ### Install node modules
 
@@ -48,7 +60,7 @@ Create user with read/write access:
 
 *Make required changes in settings.json*
 
-### Start Explorer
+### Start Explorer (First time it will create the databases!!!)
 
     npm start
 
