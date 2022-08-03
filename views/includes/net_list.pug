@@ -18,7 +18,7 @@ script.
         if (data['country_code'].length > 1) {
           flagBlock = '&nbsp;<div class="flag-icon flag-icon-'+data['country_code'].toLowerCase()+'"></div>';
         }
-        $("td:eq(0)", row).html(data['address']);
+        $("td:eq(0)", row).html(data['address']+":"+data['port']);
         $("td:eq(1)", row).html(data['protocol']);
         $("td:eq(2)", row).html(data['version']);
         $("td:eq(3)", row).html(data['country']+flagBlock);
