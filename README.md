@@ -32,23 +32,23 @@ An open source block explorer written in node.js.
 
 Enter MongoDB cli:
 
-    $ mongo
+    mongo
 
 Create database:
 
-    > use explorerdb
+    use explorerdb
 
 Create user with read/write access:
 
-    > db.createUser( { user: "iquidus", pwd: "3xp!0reR", roles: [ "readWrite" ] } )
+    db.createUser( { user: "iquidus", pwd: "3xp!0reR", roles: [ "readWrite" ] } )
 
 *Note: If you're using mongo shell 4.2.x, use the following to create your user:
 
-    > db.addUser( { user: "iquidus", pwd: "3xp!0reR", roles: [ "readWrite"] })
+    db.addUser( { user: "iquidus", pwd: "3xp!0reR", roles: [ "readWrite"] })
 
 Exit MongoDB:
 
-    > exit
+    exit
 
 ### Get the source
 
